@@ -4,7 +4,6 @@ var path = require("path");
 var url = require("url");
 
 app.get('/*.htm*', function(req, res){
-    /* TODO */ app.locals.joske = {voornaam: "Joske", naam: "Vermeulen"};
     res.sendFile( path.join(__dirname + url.parse(req.url).pathname));
 });
 
