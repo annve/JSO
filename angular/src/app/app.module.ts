@@ -8,7 +8,9 @@ import { VbDatabindingComponent } from './voorbeelden/vbdatabinding/vbdatabindin
 
 @NgModule({
   declarations: [
+    // TODO: alle componenten die in deze module gedefinieerd zijn hier importeren
     AppComponent,
+    VbDatabindingComponent
   ],
   imports: [
     BrowserModule,
