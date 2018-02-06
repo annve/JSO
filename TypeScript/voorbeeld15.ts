@@ -58,6 +58,15 @@ class AdresWijziging implements Registreerbaar {
     }
 }
 
+class BootStaanplaats implements Registreerbaar{
+    id: string;
+    registratieDatum: Date;
+    registreer(): void {
+        throw new Error("Method not implemented.");
+    }
+    
+}
+
 let registraties: Registreerbaar[] = new Array<Registreerbaar>();
 registraties.push(new LaatsteWilsbeschikking("1234567", "Pierre", "Dooie", false, "RK woord- en communiedienst", "familiegraf op het Schoonselhof"));
 registraties.push(new ZonnepanelenInstallatie(9, "Zonneplein 123, Zonnewende"));

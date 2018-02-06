@@ -27,7 +27,7 @@ class HourlyEmployee extends Employee {
         if (this.hoursWorked <= 40)  // no overtime
             return this.hourlyWage * this.hoursWorked;
         else
-            return 40 * this.hoursWorked + (this.hoursWorked - 40) * this.hourlyWage * 1.5;
+            return 40 * this.hourlyWage + (this.hoursWorked - 40) * this.hourlyWage * 1.5;
     }
     toString(): string {
         return super.toString() + "\thourlyWage: " + this.hoursWorked +
@@ -36,7 +36,8 @@ class HourlyEmployee extends Employee {
 }
 
 class CommissionEmployee extends Employee {
-    constructor(firstName: string, lastName: string, ssn: string, public grossSales: number, public commissionRate: number) {
+    constructor(firstName: string, lastName: string, ssn: string, 
+        public grossSales: number, public commissionRate: number) {
         super(firstName, lastName, ssn);
     }
     get earnings(): number {
@@ -49,7 +50,9 @@ class CommissionEmployee extends Employee {
 }
 
 class BasePlusCommissionEmployee extends CommissionEmployee {
-    constructor(firstName: string, lastName: string, ssn: string, grossSales: number, commissionRate: number, public baseSalary: number) {
+    constructor(firstName: string, lastName: string, ssn: string, 
+        grossSales: number, commissionRate: number,
+         public baseSalary: number) {
         super(firstName, lastName, ssn, grossSales, commissionRate);
     }
     get earnings(): number {
@@ -77,7 +80,8 @@ class Payroll {
     }
 
     get totalEarnings(): number {
-        return this.employees.map(emp => emp.earnings).reduce((total, earning) => total + earning);
+        return this.employees.map(emp => emp.earnings).
+            reduce((total, earning) => total + earning);
     }
 
     get numberOfSalariedEmployees(): number {
