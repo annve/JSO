@@ -24,5 +24,5 @@ let employee: Employee = new Employee("Bob");
 
 animal = rhino;  // een object van een subklasse kan gebruikt worden
 // waar een object van de basisklasse verwacht wordt
-// animal = employee; // ok als Employee alle velden en methods heeft die Animal heeft (v1);
+//animal = employee; // ok als Employee alle velden en methods heeft die Animal heeft (v1);
 // anders compileerfout (v2)
