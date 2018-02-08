@@ -21,6 +21,6 @@ import { Oef00Component } from './oefeningen/oef00/oef00.component';
   providers: [],
   // TODO: in bootstrap array (enkel) alle componenten opsommen
   // die horen bij user defined tags die in index.html gebruikt worden
-  bootstrap: [Oef00Component]
+  bootstrap: [Oef00Component, VbDatabindingComponent]
 })
 export class AppModule { }
