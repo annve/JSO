@@ -18,7 +18,10 @@ import { VbroutingReqparamComponent } from './voorbeelden/vbrouting/vbrouting-re
 import { PageNotFoundComponent } from './voorbeelden/vbrouting/page-not-found.component';
 import { Vbrouting0Component } from './voorbeelden/vbrouting/vbrouting0.component';
 import { VbroutingComponent } from './voorbeelden/vbrouting/vbrouting.component';
-import { VbRoutingModule } from './voorbeelden/vbrouting/vbrouting.module';
+import { HeroesService } from './oefeningen/oefheroes/heroes.service';
+import { HeroesComponent } from './oefeningen/oefheroes/heroes/heroes.component';
+import { HeroesAllComponent } from './oefeningen/oefheroes/heroes-all/heroes-all.component';
+import { HeroDetailComponent } from './oefeningen/oefheroes/hero-detail/hero-detail.component';
 // TODO: alle componenten die in deze module gedefinieerd zijn importere
   // zie vbrouting.module.ts
   /*
@@ -62,7 +65,10 @@ const appRoutes: Routes = [
     PageNotFoundComponent,
     Vbrouting0Component,
     VbroutingComponent,
-    VbroutingReqparamComponent
+    VbroutingReqparamComponent, 
+    HeroDetailComponent,
+    HeroesComponent,
+    HeroesAllComponent,
     // TODO: alle componenten die in deze module gedefinieerd zijn hier importeren
   ],
   imports: [
@@ -72,9 +78,13 @@ const appRoutes: Routes = [
     // RouterModule.forRoot( appRoutes ),
     VbRoutingModule
   ],
-  providers: [CurrencyService],
+  providers: [HeroesService],
   // TODO: in bootstrap array (enkel) alle componenten opsommen
   // die horen bij user defined tags die in index.html gebruikt worden
+<<<<<<< HEAD
   bootstrap: [VbroutingComponent]
+=======
+  bootstrap: [HeroesAllComponent]
+>>>>>>> e4628f31f85764904bdcc0f100ad115a8ddbea86
 })
 export class AppModule { }
